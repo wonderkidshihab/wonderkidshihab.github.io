@@ -1,1 +1,693 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>React App</title><script defer="defer" src="/static/js/main.b3ebc0f4.js"></script><link href="/static/css/main.e980f59c.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shihab Uddin — Senior Mobile &amp; Full-Stack Engineer • Applied AI Architect</title>
+  <meta name="description" content="Portfolio of Shihab Uddin (wonderkidshihab): Senior Flutter &amp; Full-Stack Engineer and Applied AI Architect with 6+ years shipping commercial super-apps (Garibook, Max Live, TheBorak), SaaS platforms (Mini-Tool Factory, MedPlus), and deterministic AI pipelines." />
+  <meta property="og:title" content="Shihab Uddin — Senior Mobile &amp; Full-Stack Engineer • Applied AI Architect" />
+  <meta property="og:description" content="6+ years architecting commercial Flutter super-apps, Next.js &amp; Django SaaS platforms, and deterministic AI &amp; media automation pipelines." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/56557098?v=4" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/56557098?v=4" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            obsidian: '#070b14',
+            slate950: '#0b1120',
+            card: '#0f172a',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- JSON-LD Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shihab Uddin",
+    "alternateName": "Md. Shihab Uddin",
+    "jobTitle": "Senior Mobile & Full-Stack Engineer & Applied AI Architect",
+    "url": "https://shihabuddin.web.app",
+    "image": "https://avatars.githubusercontent.com/u/56557098?v=4",
+    "email": "mailto:contact.shihab.247@gmail.com",
+    "sameAs": [
+      "https://github.com/wonderkidshihab",
+      "https://www.linkedin.com/in/shihabuddin247/",
+      "https://x.com/Shihab_247",
+      "https://minitoolsfactory.com",
+      "https://pub.dev/packages/flutter_storage_cleaner"
+    ]
+  }
+  </script>
+
+  <style>
+    body {
+      background-color: #070b14;
+      color: #e2e8f0;
+      background-image:
+        radial-gradient(circle at 15% 12%, rgba(14, 165, 233, 0.12), transparent 36%),
+        radial-gradient(circle at 85% 24%, rgba(16, 185, 129, 0.09), transparent 34%),
+        radial-gradient(circle at 50% 85%, rgba(139, 92, 246, 0.08), transparent 40%);
+    }
+    .grid-bg {
+      background-size: 32px 32px;
+      background-image:
+        linear-gradient(to right, rgba(30, 41, 59, 0.35) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(30, 41, 59, 0.35) 1px, transparent 1px);
+    }
+    .glass-card {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.88) 0%, rgba(9, 13, 22, 0.94) 100%);
+      border: 1px solid rgba(51, 65, 85, 0.55);
+      backdrop-filter: blur(12px);
+    }
+    .glass-card:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+    }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.92); }
+    }
+    .pulse-dot {
+      animation: pulseDot 2.2s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-sky-500/30 selection:text-sky-200">
+  <!-- Subtle Top Grid Overlay -->
+  <div class="fixed inset-0 grid-bg pointer-events-none opacity-60 -z-10"></div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-obsidian/80 backdrop-blur-xl">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3 group">
+        <img src="https://avatars.githubusercontent.com/u/56557098?v=4" alt="Shihab Uddin" class="w-9 h-9 rounded-full ring-2 ring-sky-400/50 object-cover" />
+        <div>
+          <span class="font-bold text-slate-100 tracking-tight block leading-none">Shihab Uddin</span>
+          <span class="font-mono text-[11px] text-sky-400 block mt-0.5">@wonderkidshihab</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#domains" class="hover:text-sky-400 transition-colors">Domains</a>
+        <a href="#systems" class="hover:text-sky-400 transition-colors">Production Systems</a>
+        <a href="#experience" class="hover:text-sky-400 transition-colors">Track Record</a>
+        <a href="#stack" class="hover:text-sky-400 transition-colors">Stack</a>
+        <a href="#contact" class="px-4 py-2 rounded-lg bg-sky-500/15 text-sky-300 border border-sky-400/30 hover:bg-sky-500/25 transition-colors">Hire / Contact</a>
+      </nav>
+
+      <a href="#contact" class="md:hidden px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-sky-500/15 text-sky-300 border border-sky-400/30">
+        Contact
+      </a>
+    </div>
+  </header>
+
+  <main id="top" class="max-w-6xl mx-auto px-5 sm:px-8">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="pt-14 pb-16 md:pt-20 md:pb-24">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-mono text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+            AVAILABLE FOR SELECT ENGINEERING &amp; ARCHITECTURE ROLES • UTC+6
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-white leading-[1.12]">
+            Architecting <span class="bg-gradient-to-r from-sky-400 via-emerald-300 to-violet-400 bg-clip-text text-transparent">Cross-Platform Apps</span>, SaaS &amp; AI Pipelines.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300/90 leading-relaxed max-w-2xl">
+            I’m <strong class="text-white font-semibold">Shihab Uddin</strong>—a Senior Mobile &amp; Full-Stack Engineer with <strong class="text-white font-semibold">6+ years</strong> of production experience shipping commercial Flutter super-apps (<span class="text-sky-300">Garibook</span>, <span class="text-sky-300">Max Live</span>, <span class="text-sky-300">TheBorak™</span>), high-scale web platforms (<span class="text-emerald-300">Mini-Tool Factory</span>, <span class="text-emerald-300">MedPlus</span>), and deterministic AI &amp; media compilers.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3.5 pt-1">
+            <a href="#systems" class="px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-sky-500/20">
+              Explore Production Systems
+            </a>
+            <a href="https://www.upwork.com/freelancers/~01571960a2310eca13" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 font-semibold text-sm transition-all">
+              Upwork Profile ↗
+            </a>
+            <a href="https://github.com/wonderkidshihab" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-medium text-sm transition-all">
+              GitHub (@wonderkidshihab)
+            </a>
+          </div>
+
+          <!-- Social Strip -->
+          <div class="flex flex-wrap items-center gap-5 pt-2 text-xs font-mono text-slate-400">
+            <a href="https://minitoolsfactory.com" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-300 transition-colors">minitoolsfactory.com ↗</a>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/shihabuddin247/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-300 transition-colors">linkedin.com/in/shihabuddin247 ↗</a>
+            <span>•</span>
+            <a href="https://pub.dev/packages/flutter_storage_cleaner" target="_blank" rel="noopener noreferrer" class="hover:text-sky-300 transition-colors">pub.dev ↗</a>
+            <span>•</span>
+            <a href="https://x.com/Shihab_247" target="_blank" rel="noopener noreferrer" class="hover:text-slate-200 transition-colors">@Shihab_247 ↗</a>
+          </div>
+        </div>
+
+        <!-- Right Terminal Card -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+            <div class="bg-slate-900/95 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-400/80"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+              </div>
+              <span class="font-mono text-[11px] text-slate-400">shihab@macbook-pro ~ zsh</span>
+              <span class="w-8"></span>
+            </div>
+            <div class="p-5 font-mono text-xs sm:text-[13px] leading-relaxed space-y-2.5 text-slate-300">
+              <div><span class="text-emerald-400">❯</span> <span class="text-white font-semibold">shihab --audit-footprint</span></div>
+              <div class="pl-3 space-y-1.5 text-[12px]">
+                <div><span class="text-slate-500">role      :</span> <span class="text-sky-300">Sr. Mobile, Full-Stack &amp; AI Architect</span></div>
+                <div><span class="text-slate-500">experience:</span> <span class="text-slate-200">6+ Years Commercial Delivery (2020–2026)</span></div>
+                <div><span class="text-slate-500">mobile    :</span> <span class="text-sky-300">Flutter • BLoC • Riverpod • Agora RTC</span></div>
+                <div><span class="text-slate-500">backend   :</span> <span class="text-emerald-300">Django DRF • Next.js • Astro • Celery</span></div>
+                <div><span class="text-slate-500">ai_systems:</span> <span class="text-violet-300">Tool Copilots • AEO • SoM Vision Agents</span></div>
+                <div><span class="text-slate-500">media_dsp :</span> <span class="text-amber-300">FFmpeg • macOS CoreText • -14 LUFS</span></div>
+                <div><span class="text-slate-500">infra     :</span> <span class="text-slate-200">Docker • Cloudflare • Supabase • MySQL</span></div>
+              </div>
+              <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
+                <span>✓ 250+ GitHub Repos Audited</span>
+                <span class="text-emerald-400">Status: Ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Metric Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+        <div class="glass-card rounded-xl p-5 border-l-2 border-l-sky-400">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white">110+</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1">Flutter &amp; Cross-Platform Repos</div>
+        </div>
+        <div class="glass-card rounded-xl p-5 border-l-2 border-l-emerald-400">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white">590+</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1">Live Client-Side Web Utilities</div>
+        </div>
+        <div class="glass-card rounded-xl p-5 border-l-2 border-l-violet-400">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white">250+</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1">Commercial &amp; R&amp;D Repositories</div>
+        </div>
+        <div class="glass-card rounded-xl p-5 border-l-2 border-l-amber-400">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white">120K+</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1">Flutter Developer Tutorial Views</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CORE DOMAINS (BENTO) ==================== -->
+    <section id="domains" class="py-14 border-t border-slate-800/70">
+      <div class="mb-10">
+        <span class="font-mono text-xs uppercase tracking-widest text-sky-400">Core Engineering Pillars</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Three Disciplines. One Cohesive Architecture.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Pillar 1 -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 font-mono font-bold mb-5">01</div>
+            <h3 class="text-lg font-bold text-white">Mobile &amp; Real-Time Systems</h3>
+            <p class="font-mono text-xs text-sky-400 mt-1 mb-4">Flutter • Dart • Clean Architecture</p>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li>• Commercial lead/core roles across <strong class="text-white">Garibook</strong>, <strong class="text-white">Max Live</strong> &amp; <strong class="text-white">TheBorak™</strong></li>
+              <li>• Clean Architecture with <code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded">flutter_bloc</code>, <code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded">Riverpod</code>, <code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded">Freezed</code> &amp; <code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded">get_it</code></li>
+              <li>• High-concurrency Agora WebRTC audio/video rooms, custom SVGA caching &amp; Flame 2D games</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-6 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-sky-300">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">iOS &amp; Android</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Agora RTC</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">FCM</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center text-emerald-400 font-mono font-bold mb-5">02</div>
+            <h3 class="text-lg font-bold text-white">Full-Stack SaaS &amp; Web Compilers</h3>
+            <p class="font-mono text-xs text-emerald-400 mt-1 mb-4">Next.js • Django DRF • Astro • Supabase</p>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li>• Founder of <strong class="text-white">Mini-Tool Factory</strong> (590+ zero-backend utilities + AEO schema compiler)</li>
+              <li>• 100K+ LOC healthcare &amp; institutional ERP backends (<strong class="text-white">MedPlus</strong>, <strong class="text-white">My-Pharma</strong>)</li>
+              <li>• Deterministic 7-step API fault-tree diagnostics, Celery workers &amp; VPS memory tuning</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-6 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-emerald-300">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Next.js</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Django DRF</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Docker</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-violet-500/15 border border-violet-400/30 flex items-center justify-center text-violet-400 font-mono font-bold mb-5">03</div>
+            <h3 class="text-lg font-bold text-white">Applied AI, SEO &amp; Media DSP</h3>
+            <p class="font-mono text-xs text-violet-400 mt-1 mb-4">Agents • Programmatic Web • FFmpeg</p>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li>• Bilingual (Bangla + English) tool-calling commerce copilots &amp; token credit ledgers</li>
+              <li>• Multi-stage Astro site generators with DOM/CSS decorrelation &amp; Cloudflare rollouts</li>
+              <li>• Retina Set-of-Mark GUI agents &amp; CoreText/<code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded">-14 LUFS</code> broadcast video renderers</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-6 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-violet-300">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">OpenAI / Gemini</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">CoreText</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Cloudflare</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRODUCTION SYSTEMS ==================== -->
+    <section id="systems" class="py-14 border-t border-slate-800/70">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-emerald-400">Verified Proof of Work</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Selected Production Systems &amp; Open Source</h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2" id="filter-bar">
+          <button data-filter="all" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono bg-sky-500 text-slate-950 font-semibold transition-all">All (9)</button>
+          <button data-filter="mobile" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-600 transition-all">Mobile &amp; Real-Time</button>
+          <button data-filter="saas" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-600 transition-all">Full-Stack SaaS</button>
+          <button data-filter="ai" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-600 transition-all">AI &amp; Automation</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+
+        <!-- 1. Mini-Tool Factory -->
+        <article data-cat="saas ai" class="project-item glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Live Product • 590+ URLs</span>
+              <a href="https://minitoolsfactory.com" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:underline">Live Site ↗</a>
+            </div>
+            <h3 class="text-lg font-bold text-white">Mini-Tool Factory</h3>
+            <p class="text-xs font-mono text-slate-400 mt-0.5 mb-3">Founder &amp; Lead Architect</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Privacy-first suite of 590+ client-side calculators, developer utilities, and technical guides executing 100% in browser memory. Powered by a custom static generator, an Answer Engine Optimization (AEO) JSON-LD enrichment compiler, and 200+ automated tests.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-300">
+            <span class="px-2 py-0.5 rounded bg-slate-900">TypeScript</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Python Compiler</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">JSON-LD / AEO</span>
+          </div>
+        </article>
+
+        <!-- 2. Max Live -->
+        <article data-cat="mobile" class="project-item glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-sky-500/15 text-sky-300 border border-sky-500/30">83K+ LOC • 430+ Commits</span>
+              <span class="text-xs font-mono text-slate-500">Commercial</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Max Live Streaming Platform</h3>
+            <p class="text-xs font-mono text-slate-400 mt-0.5 mb-3">Senior Flutter Engineer (#2 Contributor)</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              High-concurrency real-time video &amp; audio live-streaming mobile app featuring multi-host rooms, interactive real-time mini-games, Firebase leaderboards, Crashlytics telemetry, and hardware-accelerated SVGA gift animations.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-300">
+            <span class="px-2 py-0.5 rounded bg-slate-900">Flutter</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Agora WebRTC</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Freezed</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">SVGA</span>
+          </div>
+        </article>
+
+        <!-- 3. Garibook -->
+        <article data-cat="mobile" class="project-item glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-sky-500/15 text-sky-300 border border-sky-500/30">620+ Commits</span>
+              <span class="text-xs font-mono text-slate-500">Mobility</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Garibook &amp; Garibook Driver</h3>
+            <p class="text-xs font-mono text-slate-400 mt-0.5 mb-3">Lead / Core Flutter Engineer</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Led development on the next-generation Garibook Driver application (#1 contributor) and core rider app—delivering real-time trip dispatch, similar-location matching, payment status verification, and topic-based FCM push alerts.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-300">
+            <span class="px-2 py-0.5 rounded bg-slate-900">Flutter</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Maps &amp; Location</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">FCM</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">REST API</span>
+          </div>
+        </article>
+
+        <!-- 4. MedPlus & My-Pharma -->
+        <article data-cat="saas ai" class="project-item glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">100K+ LOC • 63 Test Files</span>
+              <span class="text-xs font-mono text-slate-500">HealthTech</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">MedPlus &amp; My-Pharma</h3>
+            <p class="text-xs font-mono text-slate-400 mt-0.5 mb-3">Full-Stack &amp; Applied AI Architect</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              End-to-end online pharmacy storefront, prescription order workflow, and inventory admin suite. Includes a bilingual (Bangla + English) OpenAI function-calling copilot that parses colloquial medicine quantities, checks live stock, and mutates cart state.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-300">
+            <span class="px-2 py-0.5 rounded bg-slate-900">Next.js</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Django DRF</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">OpenAI Tools</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Docker</span>
+          </div>
+        </article>
+
+        <!-- 5. US Multi-Vertical GBP & Site Engine (Anonymized per NDA) -->
+        <article data-cat="ai saas" class="project-item glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-violet-500/15 text-violet-300 border border-violet-500/30">50K+ LOC • US Local SEO</span>
+              <span class="text-xs font-mono text-slate-500">Private Ops</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Multi-Vertical GBP &amp; Site Compiler</h3>
+            <p class="text-xs font-mono text-slate-400 mt-0.5 mb-3">Operations &amp; Web Engineering Lead</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Automated US home-service website generation pipeline (Astro + Node.js) featuring deterministic DOM/CSS/image decorrelation gates, multi-account Cloudflare Pages deployment, AI spam lead recovery, and a Supabase GBP command center.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-300">
+            <span class="px-2 py-0.5 rounded bg-slate-900">Astro</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Node.js</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Supabase</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Cloudflare</span>
+          </div>
+        </article>
+
+        <!-- 6. Institutional School ERP & Diagnostic Engine (Anonymized per NDA) -->
+        <article data-cat="saas mobile" class="project-item glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">25K+ LOC • 32 Test Files</span>
+              <span class="text-xs font-mono text-slate-500">EdTech ERP</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Institutional School ERP &amp; App</h3>
+            <p class="text-xs font-mono text-slate-400 mt-0.5 mb-3">Lead Mobile &amp; Backend Architect</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Clean-Architecture Flutter BLoC student/guardian mobile app paired with a containerized Django, Celery &amp; MySQL 8.4 administration backend—highlighted by a deterministic 7-step root-cause diagnostic engine for API fault analysis.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-300">
+            <span class="px-2 py-0.5 rounded bg-slate-900">Flutter BLoC</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Django</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Celery</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">MySQL 8.4</span>
+          </div>
+        </article>
+
+        <!-- 7. TheBorak Super App -->
+        <article data-cat="mobile" class="project-item glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-sky-500/15 text-sky-300 border border-sky-500/30">Super-App Ecosystem</span>
+              <span class="text-xs font-mono text-slate-500">BASIS Listed</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">TheBorak™ Super App</h3>
+            <p class="text-xs font-mono text-slate-400 mt-0.5 mb-3">Senior Flutter Engineer • Borak Services Ltd.</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Engineered core cross-platform mobile workflows across TheBorak™ consumer super-app, The-Borak Wings driver/provider app, and TheBorak™ Store merchant platform for ride-sharing, food delivery, and on-demand local services.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-300">
+            <span class="px-2 py-0.5 rounded bg-slate-900">Flutter</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Firebase</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">Geo-Services</span>
+          </div>
+        </article>
+
+        <!-- 8. Autonomous Vision Agents & Broadcast Video DSP -->
+        <article data-cat="ai" class="project-item glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-violet-500/15 text-violet-300 border border-violet-500/30">30K+ LOC • Vision &amp; DSP</span>
+              <span class="text-xs font-mono text-slate-500">Applied R&amp;D</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Vision GUI Agents &amp; Video DSP</h3>
+            <p class="text-xs font-mono text-slate-400 mt-0.5 mb-3">Systems &amp; Media Pipeline Creator</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Built Retina-aware Set-of-Mark desktop GUI agents (PaddleOCR + local LLMs), a WebSocket/FCM mobile IDE remote companion, and a 60fps broadcast video engine using macOS native CoreText for Bangla shaping, `-14.0 LUFS` mastering &amp; 5-gate retention auditing.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-300">
+            <span class="px-2 py-0.5 rounded bg-slate-900">Python</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">PaddleOCR</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">AppKit CoreText</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900">FFmpeg</span>
+          </div>
+        </article>
+
+        <!-- 9. Open Source & Developer Community -->
+        <article data-cat="mobile" class="project-item glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-amber-500/15 text-amber-300 border border-amber-500/30">pub.dev &amp; 120K+ Views</span>
+              <a href="https://pub.dev/packages/flutter_storage_cleaner" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:underline">pub.dev ↗</a>
+            </div>
+            <h3 class="text-lg font-bold text-white">Flutter OSS &amp; WonderFlutter</h3>
+            <p class="text-xs font-mono text-slate-400 mt-0.5 mb-3">Package Author, Contributor &amp; Educator</p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Published <code class="text-xs bg-slate-800 px-1 rounded">flutter_storage_cleaner</code> on pub.dev, contributed backward-compatible caching &amp; audio-key fixes to <code class="text-xs bg-slate-800 px-1 rounded">flutter_svga</code>, and authored iOS/Flutter tutorials reaching 120,000+ developers on YouTube.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3 mt-5 pt-4 border-t border-slate-800/80 font-mono text-[11px]">
+            <a href="https://pub.dev/packages/flutter_storage_cleaner" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">flutter_storage_cleaner ↗</a>
+            <a href="https://www.youtube.com/watch?v=7RuTl6UDaSk" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline">115K-View iOS Guide ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==================== CAREER TRACK RECORD ==================== -->
+    <section id="experience" class="py-14 border-t border-slate-800/70">
+      <div class="mb-10">
+        <span class="font-mono text-xs uppercase tracking-widest text-violet-400">Career Trajectory</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">6+ Years of Commercial &amp; Independent Delivery</h2>
+      </div>
+
+      <div class="space-y-6">
+        <div class="glass-card rounded-2xl p-6 sm:p-7">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-lg font-bold text-white">Founder, Full-Stack &amp; Applied AI Systems Architect</h3>
+              <p class="text-sm text-sky-400 font-medium">Mini-Tool Factory &amp; International Engineering Consulting (US / UK / BD)</p>
+            </div>
+            <span class="font-mono text-xs text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800 w-fit">2024 — Present</span>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Architecting programmatic web platforms (590+ live utilities on Mini-Tool Factory), US multi-vertical GBP &amp; Astro website generation pipelines, healthcare e-commerce platforms (MedPlus / My-Pharma) with bilingual AI copilots, school ERP backends, and automated CoreText/FFmpeg media engines.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 sm:p-7">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-lg font-bold text-white">Lead &amp; Senior Flutter Engineer (Contract &amp; Product Teams)</h3>
+              <p class="text-sm text-emerald-400 font-medium">Garibook • Max Live • Multi-App Commercial Ecosystems</p>
+            </div>
+            <span class="font-mono text-xs text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800 w-fit">2022 — 2025</span>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Delivered 1,500+ production commits across high-traffic commercial Flutter apps—leading the Garibook Driver rebuild, co-engineering Max Live’s 83K-LOC Agora live-streaming &amp; gaming client, and shipping B2B/consumer apps across UK, European, and Bangladeshi teams.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 sm:p-7">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-lg font-bold text-white">Senior Flutter Engineer</h3>
+              <p class="text-sm text-violet-400 font-medium">Borak Services Limited (TheBorak™ Super App) • Dhaka, Bangladesh</p>
+            </div>
+            <span class="font-mono text-xs text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800 w-fit">2020 — 2022</span>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Built cross-platform mobile applications for TheBorak™ consumer super-app, The-Borak Wings driver/service-provider network, and TheBorak™ Store, while publishing open-source Flutter starters and developer tutorials.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TECH STACK ==================== -->
+    <section id="stack" class="py-14 border-t border-slate-800/70">
+      <div class="mb-8">
+        <span class="font-mono text-xs uppercase tracking-widest text-amber-400">Technical Arsenal</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Languages, Frameworks &amp; Infrastructure</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+        <div class="glass-card rounded-xl p-5">
+          <h3 class="font-mono text-xs uppercase text-sky-400 mb-3">Mobile &amp; Desktop</h3>
+          <p class="text-slate-300 leading-relaxed">Flutter, Dart, BLoC, Riverpod, GetX, Freezed, get_it, Agora WebRTC, Flame Engine, Dart FFI, iOS &amp; Android Release Ops</p>
+        </div>
+        <div class="glass-card rounded-xl p-5">
+          <h3 class="font-mono text-xs uppercase text-emerald-400 mb-3">Web &amp; Backend</h3>
+          <p class="text-slate-300 leading-relaxed">Next.js, React, Astro, TypeScript, Tailwind CSS, Python, Django DRF, FastAPI, Celery, Node.js, WebSockets, PHP / Laravel</p>
+        </div>
+        <div class="glass-card rounded-xl p-5">
+          <h3 class="font-mono text-xs uppercase text-violet-400 mb-3">AI, SEO &amp; Media DSP</h3>
+          <p class="text-slate-300 leading-relaxed">OpenAI &amp; Gemini Function Calling, LangChain, PaddleOCR (SoM), JSON-LD / AEO, DataForSEO, Playwright, FFmpeg, Apple CoreText</p>
+        </div>
+        <div class="glass-card rounded-xl p-5">
+          <h3 class="font-mono text-xs uppercase text-amber-400 mb-3">Data &amp; Cloud</h3>
+          <p class="text-slate-300 leading-relaxed">PostgreSQL, Supabase, MySQL 8.4, Firebase / Firestore, SQLite, Docker Compose, Dokploy, Cloudflare Pages, Netlify, GitHub Actions</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="py-16 border-t border-slate-800/70">
+      <div class="glass-card rounded-3xl p-8 sm:p-12">
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
+          <div class="lg:col-span-6 space-y-5">
+            <span class="font-mono text-xs uppercase tracking-widest text-sky-400">Direct Inquiry</span>
+            <h2 class="text-3xl font-bold text-white">Let’s Build Something Durable.</h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Need a senior engineer to architect a Flutter application, ship a full-stack SaaS platform, or build an automated AI/SEO pipeline? Reach out directly via email or Upwork.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-slate-400 w-20">Email:</span>
+                <a href="mailto:contact.shihab.247@gmail.com" class="font-mono text-sm text-sky-300 hover:underline">contact.shihab.247@gmail.com</a>
+                <button id="copy-email-btn" type="button" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[11px] font-mono text-slate-200 transition-colors">
+                  Copy
+                </button>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-slate-400 w-20">LinkedIn:</span>
+                <a href="https://www.linkedin.com/in/shihabuddin247/" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-slate-200 hover:text-sky-300">linkedin.com/in/shihabuddin247 ↗</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-slate-400 w-20">Upwork:</span>
+                <a href="https://www.upwork.com/freelancers/~01571960a2310eca13" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-emerald-300 hover:underline">Direct Contract Profile ↗</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-slate-400 w-20">Timezone:</span>
+                <span class="font-mono text-sm text-slate-300">Bangladesh (UTC+6) • Async &amp; US/EU Overlap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Functional Mailto Composer -->
+          <form id="mailto-form" class="lg:col-span-6 space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="sender-name" class="block text-xs font-mono text-slate-400 mb-1.5">Your Name</label>
+                <input id="sender-name" type="text" required placeholder="Jane Doe" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-sm text-white focus:outline-none focus:border-sky-400" />
+              </div>
+              <div>
+                <label for="project-scope" class="block text-xs font-mono text-slate-400 mb-1.5">Project Scope</label>
+                <select id="project-scope" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-sm text-white focus:outline-none focus:border-sky-400">
+                  <option value="Flutter Mobile / Desktop Engineering">Flutter Mobile / Desktop App</option>
+                  <option value="Full-Stack SaaS (Next.js / Django)">Full-Stack Web / SaaS Platform</option>
+                  <option value="AI Pipeline / SEO Automation">AI Agent / Programmatic SEO Pipeline</option>
+                  <option value="Technical Advisory / Architecture">Architecture &amp; Technical Advisory</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="sender-msg" class="block text-xs font-mono text-slate-400 mb-1.5">Brief Details</label>
+              <textarea id="sender-msg" rows="4" required placeholder="Tell me about your timeline, goals, or current system bottlenecks..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-sm text-white focus:outline-none focus:border-sky-400"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 px-5 rounded-xl bg-gradient-to-r from-sky-500 to-emerald-400 text-slate-950 font-bold text-sm hover:opacity-95 transition-opacity">
+              Compose Direct Email →
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800/70 py-8 mt-8">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+      <div>© 2026 Shihab Uddin (@wonderkidshihab). Engineered with zero trackers.</div>
+      <div class="flex items-center gap-5">
+        <a href="https://github.com/wonderkidshihab" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300">GitHub</a>
+        <a href="https://minitoolsfactory.com" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300">Mini-Tool Factory</a>
+        <a href="https://www.linkedin.com/in/shihabuddin247/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Category Filter Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-filter');
+        filterButtons.forEach((b) => {
+          b.className = 'filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-600 transition-all';
+        });
+        btn.className = 'filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono bg-sky-500 text-slate-950 font-semibold transition-all';
+
+        projectItems.forEach((card) => {
+          const cats = card.getAttribute('data-cat') || '';
+          if (target === 'all' || cats.includes(target)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Copy Email Button
+    const copyBtn = document.getElementById('copy-email-btn');
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('contact.shihab.247@gmail.com');
+        copyBtn.textContent = 'Copied ✓';
+        setTimeout(() => { copyBtn.textContent = 'Copy'; }, 2000);
+      } catch (_) {
+        copyBtn.textContent = 'contact.shihab.247@gmail.com';
+      }
+    });
+
+    // Functional Mailto Composer
+    document.getElementById('mailto-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('sender-name').value.trim();
+      const scope = document.getElementById('project-scope').value;
+      const msg = document.getElementById('sender-msg').value.trim();
+      const subject = encodeURIComponent(`[Portfolio Inquiry] ${scope} — ${name}`);
+      const body = encodeURIComponent(`Hi Shihab,\n\n${msg}\n\nBest regards,\n${name}`);
+      window.location.href = `mailto:contact.shihab.247@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
